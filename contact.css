@@ -1,0 +1,132 @@
+body {
+  background-color: white; 
+  color: black;
+}
+
+.image{
+    margin-top: 1rem;
+    background: linear-gradient(to left, #ff001f, #0003ff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; 
+    font-size: 3rem;   
+    font-weight: bolder;      
+    height: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+
+.container {
+    min-height: auto;
+    width: 95vw;
+    border: 2px solid black;
+    margin: 1.5rem auto;
+}
+
+
+.inp{
+    height: 2.5rem;
+    width: 80vw;
+    text-align: center;
+    margin: 1.5rem auto;
+    align-self: center;
+    box-shadow: 0.2rem 0.2rem 1.2rem #ff001f;
+    border: 0;
+    outline: none;
+    position: relative;
+}
+
+
+.inp:focus{
+    box-shadow: 0 0 2rem #0003ff;
+} 
+
+feildset{
+    font-size: 1.2rem;
+    font-weight: light;
+}
+
+.buttons{
+    display: flex; 
+    align-items: center;
+    justify-content: center;
+    column-gap: 1.7rem;
+}
+
+button{
+    height: 3rem;
+    width: 9rem;
+    border: 0;
+    margin-bottom: 2rem;
+    outline: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    background: linear-gradient(to left, #0003ff, #ff001f);
+    color: white;
+    border-radius: 2rem;
+    box-shadow: 0.07rem 0.07rem 0.8rem #fff;
+}
+
+button:hover{
+    animation-name: butt;
+    animation-duration: 0.11s;
+    animation-timing-function: linear;
+    animation-delay: 0s;
+    animation-iteration-count: 1;
+    animation-direction: normal;
+    animation-fill-mode: forwards;
+    background: grey;
+    color: white;
+    box-shadow: 0 0 0 #0003ff;
+    transition-property: background, color, box-shadow;
+    transition-duration: 0.11s;
+    transition-timing-function: linear;
+}
+
+@keyframes butt {
+    0%{
+        transform: scale(100%, 100%); 
+    }
+    
+    25%{
+        transform: scale(102%, 102%); 
+    }
+    
+    50%{
+        transform: scale(105%, 105%);
+    }
+    
+    75%{
+        transform: scale(107%, 107%);
+    }
+    
+    100%{
+        transform: scale(110%, 110%);
+    }
+}
+
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: black;
+    color: white;
+  }
+  
+  .container{
+      border: 2px solid white;
+  }
+  
+  button{
+      background: linear-gradient(to left, #0003ff, #ff001f);
+      color: white;
+  }
+  
+  button:hover{
+      background-color: white;
+      color: black;
+  }
+}
